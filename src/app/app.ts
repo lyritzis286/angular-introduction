@@ -5,8 +5,15 @@ import { Step2PersonTable } from './components/step2-person-table/step2-person-t
 import { Step3PersonTableInput } from './components/step3-person-table-input/step3-person-table-input';
 import { Person } from './shared/interfaces/person';
 import { Step4ForDirective } from './components/step4-for-directive/step4-for-directive';
+import { Step5EventBind } from './components/step5-event-bind/step5-event-bind';
 @Component({
-  imports: [Step2PersonTable, RouterOutlet, Step3PersonTableInput, Step4ForDirective],
+  imports: [
+    Step2PersonTable,
+    RouterOutlet,
+    Step3PersonTableInput,
+    Step4ForDirective,
+    Step5EventBind,
+  ],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
