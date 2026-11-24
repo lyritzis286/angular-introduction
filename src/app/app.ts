@@ -9,10 +9,10 @@ import { Step5EventBind } from './components/step5-event-bind/step5-event-bind';
 @Component({
   imports: [
     Step2PersonTable,
-    RouterOutlet,
     Step3PersonTableInput,
     Step4ForDirective,
     Step5EventBind,
+    RouterOutlet,
   ],
   selector: 'app-root',
   styleUrl: './app.css',
