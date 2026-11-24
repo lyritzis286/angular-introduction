@@ -2,9 +2,10 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { Step2PersonTable } from './components/step2-person-table/step2-person-table';
-
+import { Step3PersonTableInput } from './components/step3-person-table-input/step3-person-table-input';
+import { Person } from './shared/interfaces/person';
 @Component({
-  imports: [Step2PersonTable, RouterOutlet],
+  imports: [Step2PersonTable, RouterOutlet, Step3PersonTableInput],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -18,5 +19,17 @@ export class App {
     firstname: 'Bob',
     lastname: 'Dylan',
     email: 'bob.dylan@aueb.gr',
+  };
+
+  person1: Person = {
+    firstname: 'Goorge',
+    lastname: 'Harrison',
+    email: 'george.harisson@aueb.gr',
+  };
+
+  person2: Person = {
+    firstname: 'lakis',
+    lastname: 'lalakis',
+    email: 'lalakis@aueb.gr',
   };
 }
