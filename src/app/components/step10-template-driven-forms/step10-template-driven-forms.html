@@ -1,5 +1,6 @@
 <div class="d-flex flex-column">
   <h5>New User Form</h5>
+
   <form #eform="ngForm" class="d-flex flex-column">
     <mat-form-field>
       <mat-label>firstname</mat-label>
@@ -31,14 +32,21 @@
         <mat-error>Invalid email</mat-error>
       }
     </mat-form-field>
-
-    <button
-      mat-flat-button
-      color="primary"
-      [disabled]="eform.invalid"
-      (click)="onSubmit(eform.value)"
-    >
-      Submit
-    </button>
   </form>
+
+  <button
+    mat-flat-button
+    color="primary"
+    [disabled]="eform.invalid"
+    (click)="onSubmit(eform.value)"
+  >
+    Submit
+  </button>
+  <div class="d-flex flex-column gap-4">
+    <app-step3-person-table-input
+      class="mt-2"
+      [person]="currentPerson"
+    ></app-step3-person-table-input>
+    <app-step8-simple-data-table [data]="persons"></app-step8-simple-data-table>
+  </div>
 </div>

@@ -16,5 +16,6 @@ export class Step7ListGroupMenu {
     { text: 'Step8 Simple DataTable', routerLink: 'simple-data-table-example' },
     { text: 'Step9 Component Output', routerLink: 'component-output-example' },
     { text: 'Step10 Template Forms', routerLink: 'template-driven-form' },
+    { text: 'Step11 Reactive Forms', routerLink: 'reactive-driven-form' },
   ];
 }
