@@ -13,5 +13,6 @@ export class Step7ListGroupMenu {
     { text: 'Step3 Component Input', routerLink: 'component-input-example' },
     { text: 'Step4 For Directive', routerLink: 'for-directive-example' },
     { text: 'Step5 Event Bind', routerLink: 'event-bind-example' },
+    { text: 'Step8 Simple DataTable', routerLink: 'simple-data-table-example' },
   ];
 }

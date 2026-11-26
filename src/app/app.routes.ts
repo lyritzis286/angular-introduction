@@ -4,6 +4,8 @@ import { Step4ForDirective } from './components/step4-for-directive/step4-for-di
 import { Step2PersonTable } from './components/step2-person-table/step2-person-table';
 import { Step3PersonTableInput } from './components/step3-person-table-input/step3-person-table-input';
 import { Step5EventBind } from './components/step5-event-bind/step5-event-bind';
+import { Step8SimpleDataTable } from './components/step8-simple-data-table/step8-simple-data-table';
+import { Step8SimpleDataTableShow } from './components/step8-simple-data-table-show/step8-simple-data-table-show';
 
 export const routes: Routes = [
   {
@@ -30,5 +32,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/welcome',
     pathMatch: 'full',
+  },
+  {
+    path: 'simple-data-table-example',
+    component: Step8SimpleDataTableShow,
   },
 ];

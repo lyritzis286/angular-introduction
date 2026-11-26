@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Person } from '../../shared/interfaces/person';
+import { sortBy } from 'lodash-es';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   imports: [],
@@ -6,4 +9,31 @@ import { Component } from '@angular/core';
   styleUrl: './step8-simple-data-table.css',
   templateUrl: './step8-simple-data-table.html',
 })
-export class Step8SimpleDataTable {}
+export class Step8SimpleDataTable {
+  @Input() data: Person[] | undefined;
+
+  sortOrder = {
+    firstname: 'none',
+    lastname: 'none',
+    email: 'none',
+  };
+
+  sortData(sortKey: keyof Person): void {
+    console.log('SortOrder', sortKey, this.sortOrder);
+    if (this.sortOrder[sortKey] === 'asc') {
+      this.sortOrder[sortKey] = 'desc';
+      this.data = sortBy(this.data, sortKey).reverse();
+      console.log('SortOrder_2', sortKey, this.sortOrder[sortKey]);
+    } else {
+      this.sortOrder[sortKey] = 'asc';
+      this.data = sortBy(this.data, sortKey);
+      console.log('SortOrder', sortKey, this.sortOrder[sortKey]);
+    }
+
+    for (let key in this.sortOrder) {
+      if (key !== sortKey) {
+        this.sortOrder[key as keyof Person] = 'none';
+      }
+    }
+  }
+}

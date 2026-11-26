@@ -8,6 +8,7 @@ import { Step4ForDirective } from './components/step4-for-directive/step4-for-di
 import { Step5EventBind } from './components/step5-event-bind/step5-event-bind';
 import { Navbar } from './components/navbar/navbar';
 import { Step7ListGroupMenu } from './components/step7-list-group-menu/step7-list-group-menu';
+import { Step8SimpleDataTableShow } from './components/step8-simple-data-table-show/step8-simple-data-table-show';
 @Component({
   imports: [
     Step2PersonTable,
