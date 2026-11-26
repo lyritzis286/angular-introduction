@@ -7,6 +7,7 @@ import { Step5EventBind } from './components/step5-event-bind/step5-event-bind';
 import { Step8SimpleDataTable } from './components/step8-simple-data-table/step8-simple-data-table';
 import { Step8SimpleDataTableShow } from './components/step8-simple-data-table-show/step8-simple-data-table-show';
 import { Step9ComponentOutput } from './components/step9-component-output/step9-component-output';
+import { Step10TemplateDrivenForms } from './components/step10-template-driven-forms/step10-template-driven-forms';
 
 export const routes: Routes = [
   {
@@ -39,4 +40,8 @@ export const routes: Routes = [
     component: Step8SimpleDataTableShow,
   },
   { path: 'component-output-example', component: Step9ComponentOutput },
+  {
+    path: 'template-driven-form',
+    component: Step10TemplateDrivenForms,
+  },
 ];
